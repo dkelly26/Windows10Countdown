@@ -31,12 +31,22 @@ document.getElementById('addCountdown').addEventListener('submit', e => {
   document.getElementById('addCountdown').reset();
 });
 
+// Checks across different browsers
+function isFullscreen() {
+  return document.fullscreenElement ||
+         document.webkitFullscreenElement ||
+         document.mozFullScreenElement ||
+         document.msFullscreenElement;
+}
 
 function toggleFormVisibility() {
   const form = document.getElementById('addCountdown');
-  const isFullscreen = document.fullscreenElement != null || window.innerHeight === screen.height;
-  form.style.display = isFullscreen ? 'none' : 'flex';
+  form.style.display = isFullscreen() ? 'none' : 'flex';
 }
 
 document.addEventListener('fullscreenchange', toggleFormVisibility);
+document.addEventListener('webkitfullscreenchange', toggleFormVisibility);
+document.addEventListener('mozfullscreenchange', toggleFormVisibility);
+document.addEventListener('MSFullscreenChange', toggleFormVisibility);
+
 window.addEventListener('resize', toggleFormVisibility);
