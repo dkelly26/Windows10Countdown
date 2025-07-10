@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Countdowns</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="app">
-    <h1>Countdowns</h1>
-    <div id="countdowns">
-      <div class="countdown" data-title="Windows 10 End of Support" data-date="2025-10-14T00:00:00"></div>
+  <head>
+    <meta charset="UTF‑8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdowns</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Countdowns</h1>
+      <div id="countdowns">
+        <!-- Daily work-day countdown from 8:30 AM to 5 PM -->
+        <div
+          class="countdown"
+          data-title="Workday Countdown"
+          data-date=""
+          data-created-at=""
+        >
+          <canvas width="100" height="100"></canvas>
+          <div class="countdown-text"></div>
+        </div>
+        <!-- Windows 10 No Longer Supported -->
+        <div
+          class="countdown"
+          data-title="Windows 10 End of Support"
+          data-date="2025-10-14T00:00:00"
+          data-created-at="2023-03-31T08:30:00"
+        >
+          <canvas width="100" height="100"></canvas>
+          <div class="countdown-text"></div>
+        </div>
+        <!-- Move Ins -->
+        <div
+          class="countdown"
+          data-title="Early Arrival Move-In"
+          data-date="2025-08-17T09:00:00"
+          data-created-at="2025-07-10T08:30:00"
+        >
+          <canvas width="100" height="100"></canvas>
+          <div class="countdown-text"></div>
+        </div>
+        <div
+          class="countdown"
+          data-title="Freshmen Move-In (Aug-20)"
+          data-date="2025-08-20T09:00:00"
+          data-created-at="2025-07-10T08:30:00"
+        >
+          <canvas width="100" height="100"></canvas>
+          <div class="countdown-text"></div>
+        </div>
+        <div
+          class="countdown"
+          data-title="Freshmen Move-In (Aug-21)"
+          data-date="2025-08-21T09:00:00"
+          data-created-at="2025-07-10T08:30:00"
+        >
+          <canvas width="100" height="100"></canvas>
+          <div class="countdown-text"></div>
+        </div>
+        <div
+          class="countdown"
+          data-title="Upper-Level Move-In (Aug-22)"
+          data-date="2025-08-22T09:00:00"
+          data-created-at="2025-07-10T08:30:00"
+        >
+          <canvas width="100" height="100"></canvas>
+          <div class="countdown-text"></div>
+        </div>
+      </div>
     </div>
-  </div>
-  <form id="addCountdown">
-  <input type="text" id="title" placeholder="Event Title" required />
-  <input type="datetime-local" id="date" required />
-  <button type="submit">Add Countdown</button>
-</form>
-  <script src="script.js"></script>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
