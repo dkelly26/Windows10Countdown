@@ -31,3 +31,27 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+
+form input, form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #0078D7;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

@@ -17,3 +17,26 @@ function updateCountdowns() {
 }
 setInterval(updateCountdowns, 1000);
 updateCountdowns();
+
+document.getElementById('addCountdown').addEventListener('submit', e => {
+  e.preventDefault();
+  const title = document.getElementById('title').value.trim();
+  const date = document.getElementById('date').value;
+  if (!title || !date) return;
+  const div = document.createElement('div');
+  div.className = 'countdown';
+  div.dataset.title = title;
+  div.dataset.date = date;
+  document.getElementById('countdowns').appendChild(div);
+  document.getElementById('addCountdown').reset();
+});
+
+
+function toggleFormVisibility() {
+  const form = document.getElementById('addCountdown');
+  const isFullscreen = document.fullscreenElement != null || window.innerHeight === screen.height;
+  form.style.display = isFullscreen ? 'none' : 'flex';
+}
+
+document.addEventListener('fullscreenchange', toggleFormVisibility);
+window.addEventListener('resize', toggleFormVisibility);
