@@ -41,8 +41,10 @@ function isFullscreen() {
 
 function toggleFormVisibility() {
   const form = document.getElementById('addCountdown');
-  form.style.display = isFullscreen() ? 'none' : 'flex';
+  const isFullscreen = document.fullscreenElement != null || window.innerHeight === screen.height;
+  form.style.display = isFullscreen ? 'none' : 'flex';
 }
+
 
 document.addEventListener('fullscreenchange', toggleFormVisibility);
 document.addEventListener('webkitfullscreenchange', toggleFormVisibility);
