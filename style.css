@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+  color: #006633;
+}
+
+.app {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-left: 6px solid #0078D7;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0078D7;
+}
+
+.countdown {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #FFCC33;
+  color: #006633;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
